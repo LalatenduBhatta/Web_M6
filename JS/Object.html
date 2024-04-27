@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let student = { name: "Dinesh", age: 38, address: "RCB" }
+        // console.log(student);//{name: "Dinesh", age: 38, address: "RCB"}
+        // console.log(typeof student); //object
+
+
+        // let trainer = new Object()
+        // // console.log(trainer);//{}
+        // // console.log(typeof trainer);//object
+        // trainer.name = "Kishore"
+        // trainer.age = 22
+        // trainer.address = "JSP"
+        // console.log(trainer);
+
+        // let car = { name: "A8", brand: "Audi", color: "black" }
+        // let car2 = Object.create(car)
+        // car2.name = "Supra"
+        // car2.brand = "Toyota"
+        // car2.color = "Blue"
+        // console.log(car2);//{name: "Supra", brand: "Toyota", color: "Blue" }
+
+
+
+        // function Car(name, brand, color, price) {
+        //     this.name = name;
+        //     this.brand = brand;
+        //     this.color = color
+        //     this.price = price
+        // }
+        // let car1 = new Car("gtr", "nissan", "red", "320000$")
+        // console.log(car1);
+        // let car2 = new Car("thar", "mahindra", "black", "70000$")
+        // console.log(car2);
+
+
+        // class Animal {
+        //     constructor(name, breed, color) {
+        //         this.name = name
+        //         this.breed = breed
+        //         this.color = color
+        //     }
+        // }
+        // let animal1 = new Animal("dog", "husky", "gray")
+        // console.log(animal1);
+        // const animal2 = new Animal("cat", "nepali", "white")
+        // console.log(animal2);
+
+
+        // let student = {
+        //     name: "Messi",
+        //     age: 36,
+        //     address: "Miami"
+        // }
+        // // console.log(student.name);//Messi
+        // // console.log(student.age);//36
+        // // console.log(student.address);//Miami
+
+        // console.log(student['name']);//Messi
+        // let a = "age"
+        // console.log(student[a]);//36
+        // console.log(student.isPlaced);//undefined
+
+
+        // console.log(animal);
+        // animal.breed = "G-S"
+        // console.log(animal);
+        // animal["age"] = 3
+        // console.log(animal);
+        // animal.color = "gray"
+        // console.log(animal);
+
+        // let animal = { name: "dog", color: "black" }
+        // console.log(animal);//{ name: "dog", color: "black" }
+
+        // delete animal.color;
+        // console.log(animal);//{name:"dog"}
+        // console.log(animal.color);//undefined
+
+
+        // let car = {
+        //     name: "safari",
+        //     brand: "tata",
+        //     price: "4000$",
+        //     color: "black"
+        // }
+        // for (let key in car) {
+        //     console.log(key, car[key]);
+        // }
+        // let studentMarks = {
+        //     math: 25,
+        //     English: 33,
+        //     Science: 50,
+        //     Computer: 60
+        // }
+        // // console.log(studentMarks.math)
+        // // console.log(studentMarks.English)
+        // // console.log(studentMarks.Science)
+        // // console.log(studentMarks.Computer)
+        // for (let key in studentMarks) {
+        //     console.log(key, studentMarks[key]);
+        // }
+
+
+        // let user = {
+        //     username: "Josh",
+        //     country: "ENG",
+        //     dob: 1990,
+        //     age: function (currentYear) {
+        //         console.log(currentYear - this.dob);
+        //     }
+        // }
+        // console.log(user.age);
+        // user.age(2024);
+
+
+        // let result = Object.keys(animal)
+        // console.log(result);//["name","color","height"]
+
+        // let result1 = Object.values(animal)
+        // console.log(result1);//['dog', 'black', '34inch']
+
+        // let result2 = Object.entries(animal)
+        // console.log(result2);//[['name', 'dog'],['color', 'black'],
+        // //                               ['height', '34inch']]
+
+        // animal.name = "cat"
+        // animal.age = "4yrs"
+        // console.log(animal);//{name: 'cat', color: 'black', height: '34inch', age: '4yrs'}
+        // Object.freeze(animal)
+        // animal.name = "cow"
+        // animal.isDomestic = true
+        // console.log(animal);//{name: 'cat', color: 'black', height: '34inch', age: '4yrs'}
+
+
+
+        // let num = 10
+        // let str = "ABCD"
+        // let num1 = num
+        // let str1 = str
+        // console.log(num);//10
+        // console.log(num1);//10
+        // console.log(str);//"ABCD"
+        // console.log(str1);//"ABCD"
+        // num1 = 20
+        // console.log(num);//10
+        // console.log(num1);//20
+        // str = "HELLO"
+        // console.log(str);//HELLO
+        // console.log(str1);//ABCD
+
+
+        // let animal = {
+        //     name: "dog",
+        //     color: "black",
+        //     height: "34inch"
+        // }
+        // let animal1 = animal
+        // console.log(animal);//{name: 'dog', color: 'black', height: '34inch'}
+        // console.log(animal1);//{name: 'dog', color: 'black', height: '34inch'}
+        // animal.name = "cat"
+        // console.log(animal);
+        // console.log(animal1);
+        // console.log(animal === animal1);
+        // animal1.age = "2yrs"
+        // console.log(animal);
+
+        // "use strict"
+        // console.log(this);//global /window object
+
+        // function a() {
+        //     console.log("fun dec", this);//undefined
+        // }
+        // a();
+        // let b = function () {
+        //     console.log("fun exp", this);//undefined
+        // }
+        // b();
+        // let c = () => {
+        //     console.log("arrow", this);//parent scope's this
+        // }
+        // c()
+
+        // let obj = {
+        //     name: "xyz",
+        //     greet() {
+        //         console.log("greet", this);
+        //     },
+        //     dob: 1995,
+        //     age: function () {
+        //         return 2024 - this.dob
+        //     }
+        // }
+        // obj.greet()//obj
+        // console.log(obj.age())//29
+
+
+        // let obj2 = {
+        //     address: "JSP",
+        //     print: function () {
+        //         console.log("print", this);//obj2
+        //         function print2() {
+        //             console.log("print2", this);//global
+        //         }
+        //         print2();
+        //         let print3 = function () {
+        //             console.log("print3", this);//global
+        //         }
+        //         print3()
+        //         let print4 = () => {
+        //             console.log("print4", this);//obj2
+        //         }
+        //         print4()
+        //         let courses = {
+        //             java: function () {
+        //                 console.log("java", this);//courses
+        //             },
+        //             mern: () => {
+        //                 console.log("mern", this);//obj2
+        //             }
+        //         }
+        //         courses.java()
+        //         courses.mern()
+        //     }
+        // }
+        // obj2.print()
+
+        let user1 = {
+            firstName: "Virat",
+            lastName: "Kohli",
+            printFullName: function () {
+                console.log(this.firstName + " " + this.lastName);
+            },
+            dob: 1990
+        }
+        let user2 = {
+            firstName: "Rohit",
+            lastName: "Sharma",
+            dob: 1988
+        }
+        let user3 = {
+            firstName: "KL",
+            lastName: "Rahul",
+            dob: 1993
+        }
+        function calcAge(currentYear) {
+            console.log(currentYear - this.dob);
+        }
+        let user1Age = calcAge.bind(user1)
+        console.log(user1Age);
+        user1Age(2024)
+        user1Age(2025)
+        user1Age(2023)
+
+    </script>
+</body>
+
+</html>

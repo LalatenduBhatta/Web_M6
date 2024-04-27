@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for (let i = 0; i <= 5; i++) {
+        //     console.log(i);
+        // }
+
+        // let a = 1
+        // while (a < 10) {
+        //     console.log(a);
+        //     a += 2
+        // }
+
+        // let x = 10
+        // do {
+        //     console.log("i'm do block");
+        // } while (x > 20)
+
+        // for (let i = 0; i <= 10; i++) console.log(i)
+
+        // let num = 10
+        // while (num > 0) console.log(num--)
+        // let str = ""
+        // for (let i = 1; i <= 20; i++) {
+        //     if (i % 2 == 0) continue
+        //     str += i + " "
+        //     if (i == 15) break
+        // }
+        // console.log(str);
+
+
+        // let num = 12
+        // console.log(Math.trunc(num / 10));
+
+        let num = Number(prompt("Enter a number to check palindrome"))
+        let temp = num
+        let revNum = 0
+        while (num > 0) {
+            let rem = num % 10
+            revNum = revNum * 10 + rem
+            num = Math.trunc(num / 10)
+        }
+        if (temp == revNum) console.log(`${temp} is palindrome`)
+        else console.log(`${temp} is not a palindrome`);
+
+        // let x = Number(prompt("ENTER A NUMBER"))
+        // let y = +prompt("ENTER A NUMBER");
+        // let z = prompt("ENTER A NUMBER");
+        // console.log(x, typeof x);
+        // console.log(y, typeof y);
+        // console.log(z, typeof z);
+    </script>
+</body>
+
+</html>

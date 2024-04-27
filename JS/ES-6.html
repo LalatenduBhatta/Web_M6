@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //let & const 
+        // let a = 10;
+        // // let a=20;//error
+        // const c = 20;
+        // // c = 30;//error
+
+        // //arrow function
+        // let arrow = () => console.log("it is a arrow function");
+        // arrow();
+
+        // //template literals//string literals
+
+        // let str = `the sum of 5 and 10 = ${5 + 10}`
+        // console.log(str);
+
+        // //default parameter
+        // function add(a, b = 10) {
+        //     console.log(a + b);
+        // }
+        // add(20)//30
+
+
+        //Rest Parameter
+
+        // function add(a, ...num) {
+        //     console.log(a);//1 //10
+        //     console.log(num);//[2,3,4,5,6] //[20,30,40,50]
+        //     let sum = 0
+        //     for (let value of num) {
+        //         sum += value
+        //     }
+        //     return sum + a
+        // }
+        // console.log(add(1, 2, 3, 4, 5, 6));//21
+        // console.log(add(10, 20, 30, 40, 50));//150
+        // // console.log(add(100));
+
+        // function rest(...x) {
+        //     console.log(x);
+        // }
+        // rest(10, "abc", true, null, { name: "A", address: "B" }, [1, 2, 3])
+
+
+
+        //Spread Operator
+        // let arr = [1, 2, 3, 4, 5]
+        // let obj = { name: "a", age: 10, address: "blr" }
+        // let str = "JSPIDERS"
+
+        // console.log(...arr);
+        // console.log(...str);
+        // // console.log(...obj);//TypeError: Spread syntax requires ...iterable[Symbol.iterator]
+
+        // let arr2 = [6, 7, 8, 9]
+        // let arr3 = [...arr, ...arr2, 10, 11]
+        // console.log(arr3);
+
+        // let obj2 = { name: "b", isMarried: false }
+        // let obj3 = { ...obj2, ...obj }
+        // console.log(obj3);
+
+        // let arr = [10, 20, 30, 40, 50]
+        // let obj = { name: "a", age: 10, address: "blr" }
+        // let str = "JSPIDERS"
+
+        // let a = [...arr]
+        // console.log(a);//[1, 2, 3, 4, 5] //creates a new array ref
+        // let b = arr //same ref
+        // console.log(arr === b);//true
+        // console.log(arr === a);//false
+        // arr[0] = 100
+        // console.log(arr);//[100, 2, 3, 4, 5]
+        // console.log(a);//[1, 2, 3, 4, 5]
+        // console.log(b);//[100, 2, 3, 4, 5]
+        // let b = { ...arr }
+        // console.log(b);//{0: 10, 1: 20, 2: 30, 3: 40, 4: 50}
+
+        // let a = { ...obj }
+        // console.log(a);//new obj ref
+        // // let b = [...obj]//TypeError: obj is not iterable
+
+
+        // let a = [...str]
+        // console.log(a);//['J', 'S', 'P', 'I', 'D', 'E', 'R', 'S']
+
+        // let b = { ...str }
+        // console.log(b);//{0: 'J', 1: 'S', 2: 'P', 3: 'I', 4: 'D', 5: 'E', 6: 'R', 7: 'S'}
+
+
+        // let obj = { name: "A", age: 20 }
+        // // let name = obj.name
+        // // let age = obj.age
+        // let { name, age, address } = obj
+        // console.log(name);//A
+        // console.log(age);//20
+        // console.log(address);//undefined
+
+
+        // let arr = [10, 20, 30, 40]
+        // // let a = arr[0]
+        // let [a, b, abcd, xyz] = arr
+        // console.log(a);//10
+        // console.log(b);//20
+        // console.log(abcd);//30
+        // console.log(xyz);//40
+
+
+        // let num1 = [1, 2, 3, 4]
+        // let num2 = [5, 6, 7]
+
+        // // let [a, b, c, d, e, f, g] = [...num1, ...num2]
+        // // console.log(e);//5
+
+        // let [a, b, ...c] = [...num1, ...num2]
+        // console.log(a);//1
+        // console.log(b);//2
+        // console.log(c);//[3, 4, 5, 6, 7]
+
+        // let student1 = { name: "Rocky", age: 21, address: "KGF" }
+        // let student2 = { name: "Virat", email: "virat@gmail.com" }
+
+        // let { name, address, ...student3 } = { ...student1, ...student2 }
+        // console.log(name);//Virat
+        // console.log(address);//KGF
+        // console.log(student3);//{age: 21, email: 'virat@gmail.com'}
+
+        // class Animal {
+        //     constructor(name, color, age) {
+        //         this.name = name
+        //         this.color = color
+        //         this.age = age
+        //     }
+        //     getInfo() {
+        //         console.log(`${this.name} is ${this.age} years old and ${this.color} color`);
+        //     }
+        // }
+        // // let animal1 = new Animal("dog", "gray", 3)
+        // // console.log(animal1);
+        // // animal1.getInfo()
+        // // let animal2 = new Animal("cat", "white", 2)
+        // // console.log(animal2);
+        // // animal2.getInfo()
+        // class Dog extends Animal {
+        //     constructor(name, color, age, breed) {
+        //         super(name, color, age)
+        //         this.breed = breed
+        //     }
+        //     getBreed() {
+        //         console.log("the dog is a " + this.breed + " breed");
+        //     }
+        //     getInfo() {
+        //         console.log("info about dog from  dog class");
+        //     }
+        // }
+
+        // let dog1 = new Dog("tom", "black", 4, "labro")
+        // console.log(dog1);
+        // dog1.getBreed()
+        // dog1.getInfo()//Dog class
+
+
+
+        // class Animal {
+        //     #dob
+        //     constructor(name, color, age) {
+        //         this.name = name
+        //         this.color = color
+        //         this.age = age
+        //     }
+        //     setDob(dob) {//to set the private property
+        //         this.#dob = dob
+        //     }
+        //     getDob() {//to get the private property
+        //         console.log(this.#dob);
+        //     }
+        // }
+        // let animal1 = new Animal("dog", "gray", 3)
+        // console.log(animal1);
+        // animal1.setDob("31/02/2020")
+        // animal1.getDob()
+        // // console.log(animal1.#dob)//SyntaxError: Private field '#dob' must be declared in an enclosing class
+
+
+
+        // class Animal {
+        //     constructor(name, color, age) {
+        //         this.name = name
+        //         this.color = color
+        //         this.age = age
+        //         if (this.constructor == Animal) {
+        //             throw "can't create a instance"
+        //         }
+        //     }
+        //     getInfo() {
+        //         throw "can't access the method without subclass"
+        //     }
+        // }
+        // // let animal1 = new Animal("cat", "white", "2")
+        // // console.log(animal1); //can't create a instance
+        // // animal1.getInfo()//can't access the method without subclass
+        // class Cat extends Animal {
+        //     constructor(name, color, age) {
+        //         super(name, color, age)
+        //     }
+        //     getInfo() {
+        //         console.log("i'm a cat my name is " + this.name);
+        //     }
+        // }
+        // let cat1 = new Cat("jerry", "orange", 3)
+        // console.log(cat1);
+        // cat1.getInfo()
+
+
+
+        // Array.prototype.finSum = function (callback) {
+        //     // console.log(this);
+        //     let array = this
+        //     let sum = 0
+        //     for (let i = 0; i < array.length; i++) {
+        //         sum += callback(array[i], i, array)
+        //     }
+        //     return sum;
+        // }
+        // let num = [1, 2, 3, 4, 5]
+        // let result = num.finSum((ele, index, arrRef) => {
+        //     return ele
+        // })
+        // console.log(result);
+        // let num2 = [10, 20, 30]
+        // let result2 = num2.finSum((ele) => {
+        //     return ele
+        // })
+        // console.log(result2);
+
+        // function Car(name, color, price) {
+        //     this.name = name
+        //     this.color = color
+        //     this.price = price
+        // }
+        // let car1 = new Car("Audi", "blue", "10000$")
+        // console.log(car1);//{name: 'Audi', color: 'blue', price: '10000$'}
+        // Car.prototype.getCarInfo = function () {
+        //     console.log(this.name + " car is " + this.price + " costs");
+        // }
+        // car1.getCarInfo()//Audi car is 10000$ costs
+        // console.log(car1.__proto__)//to access the prototype from object
+        // console.log(Car.prototype);//to access the prototype from constructor function
+
+
+
+    </script>
+</body>
+
+</html>

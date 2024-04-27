@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for (let i = 0; i < fruits.length; i++) {
+        //     console.log(fruits[i]);
+        // }
+        // for (let i in fruits) {
+        //     console.log(i, fruits[i]);
+        // }
+
+        // let num = [1, 2, 3, 4, 10.5]
+        // let fruits = ["apple", "grapes", "mango"]
+        // for (let value of fruits) {
+        //     console.log(value);
+        // }
+        // let sum = 0
+        // for (let number of num) {
+        //     sum += number
+        // }
+        // console.log(sum);//20.5
+
+        // let obj = {
+        //     a: 1,
+        //     b: 2,
+        // }
+        // for (let key in obj) {
+        //     console.log(key);
+        // }
+        // for (let value of obj) { //obj is not iterable
+        //     console.log(value);
+        // }
+
+        // let arr = [1, 2, 3, 4, "abc", true]
+        // // let result = arr.toString()
+        // // console.log(result, typeof result);// 1,2,3,4,abc,true string
+
+        // let result1 = arr.join()
+        // console.log(result1);// 1,2,3,4,abc,true
+        // let result2 = arr.join("@")
+        // console.log(result2);//1@2@3@4@abc@true
+        // let result3 = arr.join("")
+        // console.log(result3);//1234abctrue
+
+
+        // let arr = [1, [2, 3], [4, [5, [6, 7]]]]
+        // console.log(arr);
+        // let result1 = arr.flat()
+        // console.log(result1);//[1, 2, 3, 4, [5, [6, 7]]]
+        // let result2 = arr.flat(3)
+        // console.log(result2);//[1,2,3,4,5,6,7]
+
+        // let num = [10, 20, 30, 40]
+        // let str = ["A", "B", "C", "D"]
+        // let result = num.concat(str)
+        // console.log(result);//[10, 20, 30, 40, 'A', 'B', 'C', 'D']
+        // console.log(num);//[10, 20, 30, 40]
+        // console.log(str);//["A", "B", "C", "D"]
+
+
+        // let num = [10, 20, 30, 40]
+        // let result = num.reverse()
+        // console.log(result);//[40, 30, 20, 10]
+        // console.log(num);//[40, 30, 20, 10]
+        // console.log(num === result);//true
+
+        // let num = [10, 20, 30, 40]
+        // let result = num.slice(1, 3)
+        // console.log(result);//[20,30]
+        // console.log(num);//[10, 20, 30, 40]
+        // let result1 = num.slice(1)
+        // console.log(result1);//[20, 30, 40]
+        // let result2 = num.slice()
+        // console.log(result2);//[10, 20, 30, 40]
+        // console.log(num === result2);//false
+
+        // let num = [10, 20, 30, 40]
+        // num.splice(2, 0, 100, 200, 300)
+        // console.log(num);//[10, 20, 100, 200, 300, 30, 40]
+        // let result = num.splice(1, 2)
+        // console.log(num);// [10, 200, 300, 30, 40]
+        // console.log(result);//[20,100]
+
+        // let result1 = number.indexOf(5)
+        // console.log(result1);//2
+        // let result2 = number.indexOf(30)
+        // console.log(result2);//-1
+        // let result1 = number.lastIndexOf(5)
+        // console.log(result1);//6
+        // let result2 = number.lastIndexOf(20)
+        // console.log(result2);//-1
+        // let result = number.includes(15)
+        // console.log(result);//true
+        // let result1 = number.includes(50)
+        // console.log(result1);//false
+
+        // let number = [1, 10, 45, 15, 25, 5, 18]
+        // let result = number.find((ele, i, arr) => {
+        //     // console.log(ele, i, arr);
+        //     return ele % 3 == 0
+        // })
+        // console.log(result);//45
+        // let result = number.filter(function (ele) {
+        //     return ele % 3 == 0
+        // })
+        // console.log(result);//[45,15,18]
+
+
+
+        // let users = [{ name: "A", age: 12 },
+        // { name: "B", age: 15 },
+        // { name: "C", age: 19 },
+        // { name: "D", age: 24 }]
+
+        // // let result = users.find(ele => ele.age > 18)
+        // // console.log(result);//{ name: "C", age: 19 }
+
+        // let result = users.filter(ele => ele.age > 18)
+        // console.log(result);// [{ name: "C", age: 19 },
+        // //                       { name: "D", age: 24 }]
+
+
+
+        // let str = ["cd", "xy", "ac", "m", "e", "j"]
+        // let num = [20, 7, 15, 34, 82, 19, 6, 24]
+        // let result = str.sort()
+        // console.log(result);//['ac', 'cd', 'e', 'j', 'm', 'xy']
+        // console.log(str);//['ac', 'cd', 'e', 'j', 'm', 'xy']
+        // // let result1 = num.sort()
+        // // console.log(result1);//[15, 19, 20, 24, 34, 6, 7, 82]
+        // num.sort((a, b) => b - a)
+        // console.log(num);//[82, 34, 24, 20, 19, 15, 7, 6]
+
+
+        // let numArr = [1, 2, 3, 4, 5]
+        // let result = numArr.map((ele, i, arr) => {
+        //     return ele * 10
+        // })
+        // console.log(result);//[10, 20, 30, 40, 50]
+
+        // let objArr = [{ name: "A", age: 19 },
+        // { name: "B", age: 15 },
+        // { name: "C", age: 24 },
+        // { name: "D", age: 12 }]
+
+        // let updatedObj = objArr.map(ele => {
+        //     // console.log(ele);
+        //     if (ele.age >= 18) {
+        //         ele.isEligible = true
+        //     } else {
+        //         ele.isEligible = false
+        //     }
+        //     return ele
+        // })
+        // console.log(updatedObj) // [{name: 'A', age: 19, isEligible: true}
+        // // {name: 'B', age: 15, isEligible: false}
+        // // {name: 'C', age: 24, isEligible: true}
+        // // {name: 'D', age: 12, isEligible: false}]
+
+
+
+        // let num = [10, 20, 30, 40]
+        // let sum = 0
+        // let result = num.forEach(ele => {
+        //     sum += ele
+        //     console.log(sum);
+        // })
+        // console.log(sum);//100
+        // console.log(result);//undefined
+
+
+        // let num = [10, 20, 30, 40]
+        // // let sum = num.reduce((acc, ele, i, arr) => {
+        // //     console.log(acc, ele);
+        // //     acc = acc + ele
+        // //     return acc
+        // // }, 100)
+        // let sum = num.reduce((acc, ele) => acc += ele, 100)
+        // console.log(sum);//200
+
+        // let num = [1, 5, 70, 20, 40]
+        // let max = num.reduce((acc, ele) => {
+        //     if (acc > ele) {
+        //         return acc
+        //     } else {
+        //         return ele
+        //     }
+        // })
+        // console.log(max);
+
+        // let num = [10, 20, 30, 40]
+        // let result = num.filter(ele => ele > 20).map(ele => ele * 5).
+        //     reduce((acc, ele) => acc += ele)
+        // console.log(result);//350
+    </script>
+
+</body>
+
+</html>
